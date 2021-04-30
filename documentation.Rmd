@@ -16,18 +16,22 @@ knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 
 
 # Data Quality
-## Reporting Rate
+
+### Reporting Rate
+
 This is the percentage of submitted reports vs expected reports 
 
-## Absolute Percentage Difference
+### Absolute Percentage Difference
 
 Compares last month's ending balance and this month's beginning balance
 
 # Stock Status
-## Months of Stock
+
+### Months of Stock
 
 Remaining balance divided by average consumption in the last 3 months
 
-## Stock Out Rate
+### Stock Out Rate
+
 % of facilities stocked
 

@@ -6,6 +6,4 @@ navbar:
       href: index.html
     - text: "Journal"
       href: documentation.html
-    - text: "Links"
-      href: Links.html
 output_dir: "docs"
