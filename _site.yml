@@ -1,6 +1,6 @@
-name: "MyLabJournal"
+name: "inSupplyHealth"
 navbar:
-  title: "MyLabJournal"
+  title: "Indicator Tracking Tool"
   left:
     - text: "Home"
       href: index.html
