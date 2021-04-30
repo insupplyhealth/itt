@@ -4,6 +4,6 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "Journal"
+    - text: "Documentation"
       href: documentation.html
 output_dir: "docs"
