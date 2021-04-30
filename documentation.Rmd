@@ -1,0 +1,33 @@
+---
+title: "Indicator Dictionary"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 1
+    #code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
+```
+
+
+# Data Quality
+## Reporting Rate
+This is the percentage of submitted reports vs expected reports 
+
+## Absolute Percentage Difference
+
+Compares last month's ending balance and this month's beginning balance
+
+# Stock Status
+## Months of Stock
+
+Remaining balance divided by average consumption in the last 3 months
+
+## Stock Out Rate
+% of facilities stocked
+

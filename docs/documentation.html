@@ -11,7 +11,7 @@
 
 
 
-<title>Indicator Tracking Tool</title>
+<title>Indicator Dictionary</title>
 
 <script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
@@ -29,6 +29,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -218,6 +221,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -225,6 +291,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-sm-12 col-md-4 col-lg-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-sm-12 col-md-8 col-lg-9">
 
 
 
@@ -262,28 +338,38 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Indicator Tracking Tool</h1>
+<h1 class="title toc-ignore">Indicator Dictionary</h1>
 
 </div>
 
 
-<style type="text/css">
-.title {
-  display: none;
-}
-
-#getting-started img {
-  margin-right: 10px;
-}
-
-</style>
-<div class="row" style="padding-top: 30px;">
-<iframe width="1024" height="1060" src="https://app.powerbi.com/view?r=eyJrIjoiZDhhOGI4NWQtNmI4YS00NTQxLTk3Y2UtNWEyZmQ4ZmU2NjlhIiwidCI6IjQ4M2Q3NmI3LWVlMzQtNDJjMC05ZDY5LWQ1NzI2NjNhZTc1ZSJ9&amp;pageName=ReportSectionc66a945f0b8c05e81e82" frameborder="0" allowFullScreen="true">
-</iframe>
+<div id="data-quality" class="section level1">
+<h1>Data Quality</h1>
+<div id="reporting-rate" class="section level2">
+<h2>Reporting Rate</h2>
+<p>This is the percentage of submitted reports vs expected reports</p>
+</div>
+<div id="absolute-percentage-difference" class="section level2">
+<h2>Absolute Percentage Difference</h2>
+<p>Compares last month’s ending balance and this month’s beginning balance</p>
+</div>
+</div>
+<div id="stock-status" class="section level1">
+<h1>Stock Status</h1>
+<div id="months-of-stock" class="section level2">
+<h2>Months of Stock</h2>
+<p>Remaining balance divided by average consumption in the last 3 months</p>
+</div>
+<div id="stock-out-rate" class="section level2">
+<h2>Stock Out Rate</h2>
+<p>% of facilities stocked</p>
+</div>
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -316,6 +402,32 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
