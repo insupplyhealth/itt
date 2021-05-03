@@ -26,6 +26,7 @@ h1,h2,h3,h4,h5,h6{
 </style>
 
 # Reporting Rate
+#----------------
 ## Definition
 This indicator measures the percentage of facilities that complete and submit reports according to the defined reporting schedule. 
 
