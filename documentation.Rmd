@@ -32,7 +32,7 @@ DHIS2 : [https://hiskenya.org/](https://hiskenya.org/)
 ### Calculation
 $$\text{Reporting Rate (%) } = \frac{\text{Number of facilities submitting the required report}}{\text{Total number of facilities that are expected to submit the report}} * 100$$
 
-# Absolute Percentage Difference (APD)
+# Absolute Percentage Difference
 
 ### Definition
 The ending balance of one month should match the beginning balance for the following month. This quality measure intends to directly compare any difference between recorded ending and beginning balances.  Discrepancies in these recorded balances can result in inaccurate ordering. 
@@ -47,7 +47,7 @@ DHIS2 : [https://hiskenya.org/](https://hiskenya.org/)
 $$\text{APD (%) } = \frac{\text{Previous month Ending Balance} - \text{Beginning Balance this month}}{\text{Previous month Ending Balance}} * 100$$
 
 
-# Months Of Stock (MOS)
+# Months Of Stock
 
 ### Definition
 This indicator measures the aggregated facility stock levels for tracer products by sub-county and county for each month, represented as months of stock. This can then be categorized within the established minimum and maximum stock level parameters. 
@@ -69,7 +69,7 @@ $$\text{AMC} = \frac{\text{Total consumption for the last 3 months}}{\text{3}}$$
 We can then obtain the *Months Of Stock (MOS)* as shown below
 $$\text{MOS} = \frac{\text{Ending Balance}}{\text{AMC}}$$
 
-# Absolute Percentage Difference (APD)
+# Stock Out Rate
 
 ### Definition
 This indicator measures the percentage of facilities that experienced a stock out of each of of products the site is expected to provide, at any point in the last month. Stockout rates are calculated by product across facilities. 
@@ -89,7 +89,7 @@ This indicator is a measure of product availability or absence over a period of 
 DHIS2 : [https://hiskenya.org/](https://hiskenya.org/)
 
 ### Calculation
-$$\text{APD (%) } = \frac{\text{Total number of facilities that reported zero ending balance}}{\text{Total numbe of facilities that provided the product in the last 12 months}} * 100$$
+$$\text{SOR (%) } = \frac{\text{Total number of facilities that reported zero ending balance}}{\text{Total numbe of facilities that provided the product in the last 12 months}} * 100$$
 
 
 
