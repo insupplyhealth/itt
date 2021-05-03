@@ -15,15 +15,21 @@ knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 ```
 
 
-# My first post
+# Reporting Rate
+## Definition
+This indicator measures the percentage of facilities that complete and submit reports according to the defined reporting schedule. 
 
-2018 | 7 | 23 Last compiled: `r Sys.Date()`
+## Definition
+This indicator measures the reporting levels and timeliness of key logistics information, including consumption and stock data for health facilities. The following questions can be answered by monitoring the performance of this indicator:
+•	Is there information available for use by decision makers?
+•	Is the information available in a timely manner for use by decision makers?
 
-Notice that whatever you define as a top level header, automatically gets put into the table of contents bar on the left. 
+## Data Sources
+DHIS2
 
-## Second level header
+## Calculation
+$$\text{Reporting Rate (%) } = \frac{\text{Number of facilities submitting the required report}}{\text{Total number of facilities that are expected to submit the report}} * 100$$
 
-You can add more headers by adding more hashtags. These won't be put into the table of contents
 
 ### third level header
 
