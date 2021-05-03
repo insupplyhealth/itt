@@ -27,106 +27,69 @@ This indicator measures the reporting levels and timeliness of key logistics inf
 •	Is the information available in a timely manner for use by decision makers?
 
 ### Data Sources
-DHIS2
+DHIS2 : [https://hiskenya.org/](https://hiskenya.org/)
 
 ### Calculation
 $$\text{Reporting Rate (%) } = \frac{\text{Number of facilities submitting the required report}}{\text{Total number of facilities that are expected to submit the report}} * 100$$
 
+# Absolute Percentage Difference (APD)
 
-### third level header
+### Definition
+The ending balance of one month should match the beginning balance for the following month. This quality measure intends to directly compare any difference between recorded ending and beginning balances.  Discrepancies in these recorded balances can result in inaccurate ordering. 
 
-Here's an even lower level header
+### Purpose
+It is critical to have accurate balances recorded.  The amount recorded at the end of a month should match the amount available at the beginning of the next month.  These data elements are used to make decisions about order quantities needed in order to avoid overstocking or understocking a product.
 
-# My second post (note the order)
+### Data Sources
+DHIS2 : [https://hiskenya.org/](https://hiskenya.org/)
 
-2018 | 7 | 23 Last compiled: `r Sys.Date()`
-
-I'm writing this tutorial going from the top down. And, this is how it will be printed. So, notice the second post is second in the list. If you want your most recent post to be at the top, then make a new post starting at the top. If you want the oldest first, do, then keep adding to the bottom
-
-# Adding R stuff
-
-So far this is just a blog where you can write in plain text and serve your writing to a webpage. One of the main purposes of this lab journal is to record your progress learning R. The reason I am asking you to use this process is because you can both make a website, and a lab journal, and learn R all in R-studio. This makes everything really convenient and in the sam place. 
-
-So, let's say you are learning how to make a histogram in R. For example, maybe you want to sample 100 numbers from a normal distribution with mean = 0, and standard deviation =1, and then you want to plot a histogram. You can do this right here by using an r code block, like this:
-
-```{r}
-samples <- rnorm(100, mean=0, sd=1)
-hist(samples)
-```
-
-When you knit this R Markdown document, you will see that the histogram is printed to the page, along with the R code. This document can be set up to hide the R code in the webpage, just delete the comment (hashtag), from the cold folding option in the yaml header up top. For purposes of letting yourself see the code, and me see the code, best to keep it the way that it is. You learn all of these things and more can be customized in each R code block.
-
-# The big idea
-
-Use this lab journal to record what you do in R. This way I will be able to see what you are doing and help you along the way. You will also be creating a repository of all the things you do. You can make posts about everything. Learning specific things in R (project unrelated), and doing things for the project that we will discuss at the beginning of the Fall semester. You can get started now by fiddling around with googling things, and trying stuff out in R. I've placed some helpful starting links in the links page on this website
-
-# What can you do right now by yourself?
-
-It's hard to learn programming when you don't have specific problems that you are trying to solve. Everything just seems abstract.
-
-I wrote an [introductory programming book that introduces R](https://crumplab.github.io/programmingforpsych/), and gives some [concrete problems for you to solve](https://crumplab.github.io/programmingforpsych/programming-challenges-i-learning-the-fundamentals.html). 
-
-To get the hang of journaling and solving the problems to learn programming, my suggestion is that you use this .Rmd file to solve the problems. It would look like this:
-
-# Problem 1
-
-Do simple math with numbers, addition, subtraction, multiplication, division
-
-```{r}
-1+2
-2*5
-5/3
-(1+6+4)/5
-
-```
-
-# Problem 2
-
-Put numbers into variables, do simple math on the variables
-
-```{r}
-a<-1
-b<-2
-a+b
-
-d<-c(1,2,3)
-e<-c(5,6,7)
-d+e
-d*e
-d/e
-
-```
-
-# Problem 3
-
-Write code that will place the numbers 1 to 100 separately into a variable using for loop. Then, again using the seq function.
-
-```{r}
-# for loop solution
-# i becomes the number 1 to 100 at each step of the loop
+### Calculation
+$$\text{APD (%) } = \frac{\text{Previous month Ending Balance} - \text{Beginning Balance this month}}{\text{Previous month Ending Balance}} * 100$$
 
 
-a <- length(100) # make empty variable, set length to 100
-for (i in 1:100){
-  a[i] <-i #assigns the number in i, to the ith index of a
-}
+# Months Of Stock (MOS)
 
-print(a)
+### Definition
+This indicator measures the aggregated facility stock levels for tracer products by sub-county and county for each month, represented as months of stock. This can then be categorized within the established minimum and maximum stock level parameters. 
+Facility minimum levels for FP is one month of stock while the maximum is 4 months of stock.
 
-# for loop solution #2
+### Purpose
+This indicator provides an overall measure of how counties and sub-counties are maintaining stock levels of products every month: are they adequately stocked, understocked or overstocked. This can help reveal whether the overall stock levels are adequate, insufficient, or overstocked and if redistribution is a possibility. If chronic overstocks exist, it identifies situations that could lead to product expiration and wastage. If low stock levels are present, it identifies situations that could result in stockouts or rationing. If this indicator is measured regularly, it can reveal patterns or facilities that are having ongoing difficulties maintaining adequate supply levels. It is also useful to look at it in conjunction with stockout rates to see if these can be predicted by stock levels, and if overstocks can be redistributed to avoid expiries and address stockouts or low stocks.  
 
-a<-c() #create empty variable using combine command
-for (i in 1:100){
-  a<-c(a,i) # keeps combining a with itself and the new number in i
-}
-print(a)
 
-# seq solution
-a <- seq(1,100,1) # look up help for seq using ?seq() in console
-print(a)
+### Data Sources
+DHIS2 : [https://hiskenya.org/](https://hiskenya.org/)
 
-```
+### Calculation
 
-# Replace this with problem 4
+First, we calculate the Average Monthly consumption (AMC) in the last 3 months} as follows
 
-And keep going. Try to solve the problems with different scripts that provide the same solution. Good luck, Happy coding.
+$$\text{AMC} = \frac{\text{Total consumption for the last 3 months}}{\text{3}}$$
+
+We can then obtain the *Months Of Stock (MOS)* as shown below
+$$\text{MOS} = \frac{\text{Ending Balance}}{\text{AMC}}$$
+
+# Absolute Percentage Difference (APD)
+
+### Definition
+This indicator measures the percentage of facilities that experienced a stock out of each of of products the site is expected to provide, at any point in the last month. Stockout rates are calculated by product across facilities. 
+
+
+### Purpose
+This indicator is a measure of product availability or absence over a period of time. It represents the overall ability of a facility or program to meet a client’s needs with a full range of products and services.  The following questions can be answered by monitoring the performance of this indicator using data from the FP dashboard:
+
+•	What is the total percent of facilities stocked out of each product (by county and sub-county)?
+
+•	Are certain sub-counties at greater risk of stockouts?  To what degree (less than or greater than 10%)?
+
+•	Are certain products at greater risk of being stocked out? To what degree (less than or greater than 10%)?
+
+
+### Data Sources
+DHIS2 : [https://hiskenya.org/](https://hiskenya.org/)
+
+### Calculation
+$$\text{APD (%) } = \frac{\text{Total number of facilities that reported zero ending balance}}{\text{Total numbe of facilities that provided the product in the last 12 months}} * 100$$
+
+
+
