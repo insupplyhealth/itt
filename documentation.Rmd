@@ -1,5 +1,5 @@
 ---
-title: "Documentation"
+title: "Indicator Definition"
 output:
   html_document:
     toc: true
