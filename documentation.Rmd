@@ -25,8 +25,8 @@ knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 
 </style>
 
-
-The data source for the supply chain indicator tracking tool is extracted from Kenya Health Information System (KHIS, [https://hiskenya.org/](https://hiskenya.org/)).
+# Introduction
+The Indicator Tracking Tool is a simple tool by users for users to inform supply chain decision-making process. The tool draws periodic and aggregated logistic data from the (KHIS, [https://hiskenya.org/](https://hiskenya.org/)) to help analyze and visualize supply chain performance focusing on family planning, immunization, TB and Malaria programs. Using tracer commodities, the tool explores several indicators including reporting rates, data quality, stock status, and stock outs for family planning. For immunization, the tool also analyzes and visualize coverage, and wastage. **Note ** that current year data will be updated daily, however if you have made changes to previous year's data in *KHIS* and would like to see the changes effected, please let us know. Below, we provide a detailed description on how the indicators presented are calculated.
 
 # Reporting Rate
 
