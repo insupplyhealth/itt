@@ -19,9 +19,11 @@ knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 ## Definition
 This indicator measures the percentage of facilities that complete and submit reports according to the defined reporting schedule. 
 
-## Definition
+## Purpose
 This indicator measures the reporting levels and timeliness of key logistics information, including consumption and stock data for health facilities. The following questions can be answered by monitoring the performance of this indicator:
+
 •	Is there information available for use by decision makers?
+
 •	Is the information available in a timely manner for use by decision makers?
 
 ## Data Sources
