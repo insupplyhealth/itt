@@ -1,6 +1,6 @@
 name: "inSupplyHealth"
 navbar:
-  title: "Indicator Tracking Tool"
+  title: "inSupply Health | Indicator Tracking Tool"
   right:
     - text: "Home"
       href: index.html
