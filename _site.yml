@@ -4,6 +4,8 @@ navbar:
   right:
     - text: "Home"
       href: index.html
+    - text: "cStock"
+      href: cstock.html
     - text: "Documentation"
       href: documentation.html
 output_dir: "docs"
