@@ -91,7 +91,7 @@ This indicator is a measure of product availability or absence over a period of 
 ### Calculation
 $$\text{SOR (%) } = \frac{\text{Total number of facilities that reported zero ending balance}}{\text{Total numbe of facilities that provided the product in the last 12 months}} * 100$$
 
-# Immunization Coverage
+# Coverage
 
 ### Definition
 Immunization coverage is the percentage of eligible fully-immunized infants compared to the total number of surviving infants in the target population
@@ -106,7 +106,7 @@ $$\text{Coverage (%) } = \frac{\text{number of doses administered}}{\text{the nu
 
 
 
-# Immunization Coverage
+# Wastage
 
 ### Definition
 This indicator is defined as the percentage of stock for a given vaccine that was calculated to be wasted that month out of the total quantity of stock for that vaccine used that month
