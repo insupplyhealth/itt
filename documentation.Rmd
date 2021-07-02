@@ -91,5 +91,52 @@ This indicator is a measure of product availability or absence over a period of 
 ### Calculation
 $$\text{SOR (%) } = \frac{\text{Total number of facilities that reported zero ending balance}}{\text{Total numbe of facilities that provided the product in the last 12 months}} * 100$$
 
+# Immunization Coverage
+
+### Definition
+Immunization coverage is the percentage of eligible fully-immunized infants compared to the total number of surviving infants in the target population
+
+### Purpose
+This indicator measures the use of services and serves as a proxy for full immunization access. It is an important measure of incremental progress in the county/sub county immunization program 
+
+### Calculation
+The immunization coverage rate is calculated by comparing the number of doses administered and the number in the target population of surviving infants under one year of age. 
+
+$$\text{Coverage (%) } = \frac{\text{number of doses administered}}{\text{the number in the target population of surviving infants under one year of age}} * 100$$
+
+
+
+# Immunization Coverage
+
+### Definition
+This indicator is defined as the percentage of stock for a given vaccine that was calculated to be wasted that month out of the total quantity of stock for that vaccine used that month
+
+### Purpose
+Reducing vaccine wastage rates helps reduce vaccine stock out rates and perhaps increase coverage. 
+
+### Calculation
+The immunization coverage rate is calculated by comparing the number of doses administered and the number in the target population of surviving infants under one year of age. 
+
+$$\text{Coverage (%) } = \frac{\text{Quantity Used – Doses Administered}}{\text{Quantity Used}} * 100$$
+$$\text{Where, Quantity used } = {\text{(Beginning Balance + Quantity Received) – Ending Balance}}$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
