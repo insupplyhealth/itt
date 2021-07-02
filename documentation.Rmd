@@ -117,7 +117,7 @@ Reducing vaccine wastage rates helps reduce vaccine stock out rates and perhaps 
 ### Calculation
 The immunization coverage rate is calculated by comparing the number of doses administered and the number in the target population of surviving infants under one year of age. 
 
-$$\text{Coverage (%) } = \frac{\text{Quantity Used – Doses Administered}}{\text{Quantity Used}} * 100$$
+$$\text{Wastage (%) } = \frac{\text{Quantity Used – Doses Administered}}{\text{Quantity Used}} * 100$$
 $$\text{Where, Quantity used } = {\text{(Beginning Balance + Quantity Received) – Ending Balance}}$$
 
 
