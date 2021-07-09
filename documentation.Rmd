@@ -26,7 +26,7 @@ knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 </style>
 
 # Introduction
-The Indicator Tracking Tool is a simple tool by users for users to inform supply chain decision-making process. The tool draws periodic and aggregated logistic data from the (KHIS, [https://hiskenya.org/](https://hiskenya.org/)) to help analyze and visualize supply chain performance focusing on family planning, immunization, TB and Malaria programs. Using tracer commodities, the tool explores several indicators including reporting rates, data quality, stock status, and stock outs for family planning. For immunization, the tool also analyzes and visualize coverage, and wastage. **Note ** that current year data will be updated daily, however if you have made changes to previous year's data in *KHIS* and would like to see the changes effected, please let us know. Below, we provide a detailed description on how the indicators presented are calculated.
+The Indicator Tracking Tool is a simple tool by users for users to inform supply chain decision-making process. The tool draws periodic and aggregated logistic data from the (KHIS, [https://hiskenya.org/](https://hiskenya.org/)) to help analyze and visualize supply chain performance focusing on family planning, immunization, Malaria and Nutrition programs. Using tracer commodities, the tool explores several indicators including reporting rates, data quality, stock status, and stock outs for family planning. For immunization, the tool also analyzes and visualize coverage, and wastage. **Note ** that current year data will be updated daily, however if you have made changes to previous year's data in *KHIS* and would like to see the changes effected, please let us know. Last month's data will be loaded to the tool after the 15th of the current month. Below, we provide a detailed description on how the indicators presented are calculated.
 
 # Reporting Rate
 
@@ -52,21 +52,20 @@ The ending balance of one month should match the beginning balance for the follo
 It is critical to have accurate balances recorded.  The amount recorded at the end of a month should match the amount available at the beginning of the next month.  These data elements are used to make decisions about order quantities needed in order to avoid overstocking or understocking a product.
 
 ### Calculation
-$$\text{APD (%) } = \frac{\text{Previous month Ending Balance} - \text{Beginning Balance this month}}{\text{Previous month Ending Balance}} * 100$$
+$$\text{APD (%) } =   \frac{\text{ABS(Previous month Ending Balance} - \text{Beginning Balance this month)}}{\text{Previous month Ending Balance}} * 100$$
 
 
 # Months Of Stock
 
 ### Definition
 This indicator measures the aggregated facility stock levels for tracer products by sub-county and county for each month, represented as months of stock. This can then be categorized within the established minimum and maximum stock level parameters. 
-Facility minimum levels for FP is one month of stock while the maximum is 4 months of stock.
 
 ### Purpose
 This indicator provides an overall measure of how counties and sub-counties are maintaining stock levels of products every month: are they adequately stocked, understocked or overstocked. This can help reveal whether the overall stock levels are adequate, insufficient, or overstocked and if redistribution is a possibility. If chronic overstocks exist, it identifies situations that could lead to product expiration and wastage. If low stock levels are present, it identifies situations that could result in stockouts or rationing. If this indicator is measured regularly, it can reveal patterns or facilities that are having ongoing difficulties maintaining adequate supply levels. It is also useful to look at it in conjunction with stockout rates to see if these can be predicted by stock levels, and if overstocks can be redistributed to avoid expiries and address stockouts or low stocks.  
 
 ### Calculation
 
-First, we calculate the Average Monthly consumption (AMC) in the last 3 months} as follows
+First, we calculate the Average Monthly consumption (AMC) in the last 3 months, as follows
 
 $$\text{AMC} = \frac{\text{Total consumption for the last 3 months}}{\text{3}}$$
 
@@ -89,20 +88,19 @@ This indicator is a measure of product availability or absence over a period of 
 •	Are certain products at greater risk of being stocked out? To what degree (less than or greater than 10%)?
 
 ### Calculation
-$$\text{SOR (%) } = \frac{\text{Total number of facilities that reported zero ending balance}}{\text{Total numbe of facilities that provided the product in the last 12 months}} * 100$$
+$$\text{SOR (%) } = \frac{\text{Total number of facilities that reported zero ending balance this month}}{\text{Total number of facilities that provided the product in the last 12 months}} * 100$$
 
 # Coverage
 
 ### Definition
-Immunization coverage is the percentage of eligible fully-immunized infants compared to the total number of surviving infants in the target population
+WHO defines immunization coverage as the fraction of a target population that is vaccinated with a defined number of doses for a certain antigen or vaccine, expressed as a percentage.
 
 ### Purpose
 This indicator measures the use of services and serves as a proxy for full immunization access. It is an important measure of incremental progress in the county/sub county immunization program 
 
 ### Calculation
-The immunization coverage rate is calculated by comparing the number of doses administered and the number in the target population of surviving infants under one year of age. 
 
-$$\text{Coverage (%) } = \frac{\text{number of doses administered}}{\text{the number in the target population of surviving infants under one year of age}} * 100$$
+$$\text{Coverage (%) } = \frac{\text{number vaccinated with defined doses}}{\text{target population}} * 100$$
 
 
 

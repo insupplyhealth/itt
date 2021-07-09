@@ -355,7 +355,7 @@ div.tocify {
 </style>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>The Indicator Tracking Tool is a simple tool by users for users to inform supply chain decision-making process. The tool draws periodic and aggregated logistic data from the (KHIS, <a href="https://hiskenya.org/">https://hiskenya.org/</a>) to help analyze and visualize supply chain performance focusing on family planning, immunization, TB and Malaria programs. Using tracer commodities, the tool explores several indicators including reporting rates, data quality, stock status, and stock outs for family planning. For immunization, the tool also analyzes and visualize coverage, and wastage. <strong>Note </strong> that current year data will be updated daily, however if you have made changes to previous year’s data in <em>KHIS</em> and would like to see the changes effected, please let us know. Below, we provide a detailed description on how the indicators presented are calculated.</p>
+<p>The Indicator Tracking Tool is a simple tool by users for users to inform supply chain decision-making process. The tool draws periodic and aggregated logistic data from the (KHIS, <a href="https://hiskenya.org/">https://hiskenya.org/</a>) to help analyze and visualize supply chain performance focusing on family planning, immunization, Malaria and Nutrition programs. Using tracer commodities, the tool explores several indicators including reporting rates, data quality, stock status, and stock outs for family planning. For immunization, the tool also analyzes and visualize coverage, and wastage. <strong>Note </strong> that current year data will be updated daily, however if you have made changes to previous year’s data in <em>KHIS</em> and would like to see the changes effected, please let us know. Last month’s data will be loaded to the tool after the 15th of the current month. Below, we provide a detailed description on how the indicators presented are calculated.</p>
 </div>
 <div id="reporting-rate" class="section level1">
 <h1>Reporting Rate</h1>
@@ -386,14 +386,14 @@ div.tocify {
 </div>
 <div id="calculation-1" class="section level3">
 <h3>Calculation</h3>
-<p><span class="math display">\[\text{APD (%) } = \frac{\text{Previous month Ending Balance} - \text{Beginning Balance this month}}{\text{Previous month Ending Balance}} * 100\]</span></p>
+<p><span class="math display">\[\text{APD (%) } =   \frac{\text{ABS(Previous month Ending Balance} - \text{Beginning Balance this month)}}{\text{Previous month Ending Balance}} * 100\]</span></p>
 </div>
 </div>
 <div id="months-of-stock" class="section level1">
 <h1>Months Of Stock</h1>
 <div id="definition-2" class="section level3">
 <h3>Definition</h3>
-<p>This indicator measures the aggregated facility stock levels for tracer products by sub-county and county for each month, represented as months of stock. This can then be categorized within the established minimum and maximum stock level parameters. Facility minimum levels for FP is one month of stock while the maximum is 4 months of stock.</p>
+<p>This indicator measures the aggregated facility stock levels for tracer products by sub-county and county for each month, represented as months of stock. This can then be categorized within the established minimum and maximum stock level parameters.</p>
 </div>
 <div id="purpose-2" class="section level3">
 <h3>Purpose</h3>
@@ -401,7 +401,7 @@ div.tocify {
 </div>
 <div id="calculation-2" class="section level3">
 <h3>Calculation</h3>
-<p>First, we calculate the Average Monthly consumption (AMC) in the last 3 months} as follows</p>
+<p>First, we calculate the Average Monthly consumption (AMC) in the last 3 months, as follows</p>
 <p><span class="math display">\[\text{AMC} = \frac{\text{Total consumption for the last 3 months}}{\text{3}}\]</span></p>
 <p>We can then obtain the <em>Months Of Stock (MOS)</em> as shown below <span class="math display">\[\text{MOS} = \frac{\text{Ending Balance}}{\text{AMC}}\]</span></p>
 </div>
@@ -421,14 +421,14 @@ div.tocify {
 </div>
 <div id="calculation-3" class="section level3">
 <h3>Calculation</h3>
-<p><span class="math display">\[\text{SOR (%) } = \frac{\text{Total number of facilities that reported zero ending balance}}{\text{Total numbe of facilities that provided the product in the last 12 months}} * 100\]</span></p>
+<p><span class="math display">\[\text{SOR (%) } = \frac{\text{Total number of facilities that reported zero ending balance this month}}{\text{Total number of facilities that provided the product in the last 12 months}} * 100\]</span></p>
 </div>
 </div>
 <div id="coverage" class="section level1">
 <h1>Coverage</h1>
 <div id="definition-4" class="section level3">
 <h3>Definition</h3>
-<p>Immunization coverage is the percentage of eligible fully-immunized infants compared to the total number of surviving infants in the target population</p>
+<p>WHO defines immunization coverage as the fraction of a target population that is vaccinated with a defined number of doses for a certain antigen or vaccine, expressed as a percentage.</p>
 </div>
 <div id="purpose-4" class="section level3">
 <h3>Purpose</h3>
@@ -436,8 +436,7 @@ div.tocify {
 </div>
 <div id="calculation-4" class="section level3">
 <h3>Calculation</h3>
-<p>The immunization coverage rate is calculated by comparing the number of doses administered and the number in the target population of surviving infants under one year of age.</p>
-<p><span class="math display">\[\text{Coverage (%) } = \frac{\text{number of doses administered}}{\text{the number in the target population of surviving infants under one year of age}} * 100\]</span></p>
+<p><span class="math display">\[\text{Coverage (%) } = \frac{\text{number vaccinated with defined doses}}{\text{target population}} * 100\]</span></p>
 </div>
 </div>
 <div id="wastage" class="section level1">
