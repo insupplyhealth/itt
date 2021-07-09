@@ -69,7 +69,7 @@ First, we calculate the Average Monthly consumption (AMC) in the last 3 months, 
 
 $$\text{AMC} = \frac{\text{Total consumption for the last 3 months}}{\text{3}}$$
 
-We can then obtain the *Months Of Stock (MOS)* as shown below
+We can then obtain the Months Of Stock (MOS) as shown below
 $$\text{MOS} = \frac{\text{Ending Balance}}{\text{AMC}}$$
 
 # Stock Out Rate
